@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <!--The weight sum property is used to divide the layout into
+        different parts and then giving each layout a particular weight
+        gives it that amount of space on the screen-->
+
+
+        <!--Since each parent layout will have a specific weight, we need
+        not give any width to those layout-->
+
+        <ImageView
+            android:id="@+id/imgRestaurant"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1.5"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/rlContent"
+            android:layout_weight="3.3">
+
+            <TextView
+                android:id="@+id/txtRestaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Ramesh Ice Cream Parlour"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtRestaurantName"
+                android:padding="08dp"
+                android:drawableLeft="@drawable/ic_rupee"
+                android:text="299"
+                android:textColor="#357a38"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favourite"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/txtRestaurantRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_ratings"
+                android:drawablePadding="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:padding="4dp"
+                android:text="4.5"
+                android:textColor="#ffca28"
+                android:textSize="15sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
